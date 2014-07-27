@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="88e-QT-eDS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="8sg-Nk-t6J">
+            <objects>
+                <navigationController id="88e-QT-eDS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FWY-he-k65">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FI2-ce-szK" kind="relationship" relationship="rootViewController" id="xDi-dW-xXL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ceR-27-fkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-638" y="152"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Iss-41-a68">
+            <objects>
+                <viewController id="FI2-ce-szK" customClass="ViewController" customModule="IdioticReddit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GwB-13-qIu"/>
+                        <viewControllerLayoutGuide type="bottom" id="oPn-Xq-jpn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Od5-Z9-URq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pYp-NN-wf8"/>
+                    <connections>
+                        <segue destination="aKn-gR-4FF" kind="custom" identifier="EmptySubreddit" customClass="EmptySegue" id="Wcb-NZ-qlO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zUu-VN-0Ut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88" y="152"/>
+        </scene>
+        <!--Subreddit-->
+        <scene sceneID="4yq-sc-1uL">
+            <objects>
+                <tableViewController storyboardIdentifier="LinkViewController" title="Subreddit" id="aKn-gR-4FF" customClass="LinkViewController" customModule="IdioticReddit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6KW-qd-wbD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MCSwipeTableViewCellIdentifier" id="rdt-Zd-7Qp" customClass="MCSwipeTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rdt-Zd-7Qp" id="6g3-CV-OsY">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aKn-gR-4FF" id="QTa-xI-0WP"/>
+                            <outlet property="delegate" destination="aKn-gR-4FF" id="z6x-WJ-2u1"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="Nct-kZ-qoF" kind="custom" customClass="EmptySegue" id="acK-Z2-77a"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vkI-Jz-56y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728" y="152"/>
+        </scene>
+        <!--Link-->
+        <scene sceneID="LGR-1C-oJZ">
+            <objects>
+                <tableViewController storyboardIdentifier="CommentViewController" title="Link" id="Nct-kZ-qoF" customClass="CommentViewController" customModule="IdioticReddit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RAR-H8-gbt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MCSwipeTableViewCellIdentifier" id="ka9-bC-8ia" customClass="MCSwipeTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ka9-bC-8ia" id="8ke-ix-SGn">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Nct-kZ-qoF" id="Z7d-kZ-JOy"/>
+                            <outlet property="delegate" destination="Nct-kZ-qoF" id="iba-G4-Dmt"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lU9-ee-3SW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1387" y="152"/>
+        </scene>
+    </scenes>
+</document>
