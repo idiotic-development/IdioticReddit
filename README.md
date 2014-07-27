@@ -1,4 +1,5 @@
 # Idiotic Reddit 
+* Please don't be all creepy with my Reddit userame and password. 
 
 ## TODO:
 * interface 
